@@ -430,45 +430,65 @@ p {
   color: #fff;
   font-weight: 500;
   margin: 0;
+  line-height: 1.7;
 }
 
-/* Background Overlays & Patterns */
+/* Background Overlays & Custom Fur Patterns */
 .cat-category-intro::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(13, 15, 14, 0.85); /* Heavy dark overlay ensures text readability */
+  background-color: rgba(13, 15, 14, 0.88); /* Heavy dark overlay ensures text readability over the complex patterns */
   z-index: 1;
 }
 
-/* Cheetah Spots Pattern */
+/* 1. Realistic Cheetah Spots */
 .bg-cheetah {
-  background-color: #dcb37b;
-  background-image: radial-gradient(circle, #1a1a1a 20%, transparent 25%);
-  background-size: 25px 25px;
-  background-position: 0 0, 12px 12px;
+  background-color: #dfb164;
+  background-image:
+    radial-gradient(circle at 15% 25%, #1a1a1a 4px, transparent 5px),
+    radial-gradient(circle at 45% 15%, #1a1a1a 5px, transparent 6px),
+    radial-gradient(circle at 75% 35%, #1a1a1a 4px, transparent 5px),
+    radial-gradient(circle at 25% 65%, #1a1a1a 6px, transparent 7px),
+    radial-gradient(circle at 65% 75%, #1a1a1a 5px, transparent 6px),
+    radial-gradient(circle at 90% 85%, #1a1a1a 4px, transparent 5px),
+    radial-gradient(circle at 85% 10%, #1a1a1a 5px, transparent 6px),
+    radial-gradient(circle at 10% 90%, #1a1a1a 6px, transparent 7px);
+  background-size: 70px 70px;
 }
 
-/* Caracal Solid Fur Gradient */
+/* 2. Realistic Caracal Solid Texture */
 .bg-caracal {
-  background: linear-gradient(135deg, #b5652a 0%, #8c4611 100%);
+  background-color: #b5652a;
+  background-image:
+    repeating-linear-gradient( 45deg, rgba(0,0,0,0.04) 0px, rgba(0,0,0,0.04) 1px, transparent 1px, transparent 3px ),
+    repeating-linear-gradient( -45deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 4px );
 }
 
-/* Serval Larger Spots Pattern */
+/* 3. Realistic Serval Spots (Larger and Oval) */
 .bg-serval {
   background-color: #e0b876;
-  background-image: radial-gradient(ellipse, #1a1a1a 30%, transparent 35%);
-  background-size: 35px 45px;
-  background-position: 0 0, 17px 22px;
+  background-image:
+    radial-gradient(ellipse at 20% 30%, #1a1a1a 7px, transparent 9px),
+    radial-gradient(ellipse at 70% 20%, #1a1a1a 9px, transparent 11px),
+    radial-gradient(ellipse at 40% 70%, #1a1a1a 8px, transparent 10px),
+    radial-gradient(ellipse at 85% 80%, #1a1a1a 10px, transparent 12px),
+    radial-gradient(ellipse at 50% 40%, #1a1a1a 5px, transparent 7px);
+  background-size: 90px 90px;
 }
 
-/* Ocelot Rosette Pattern */
+/* 4. Realistic Ocelot Rosettes */
 .bg-ocelot {
   background-color: #c49a5b;
-  background-image: radial-gradient(circle at center, #c49a5b 20%, #1a1a1a 25%, #1a1a1a 35%, transparent 40%);
-  background-size: 40px 30px;
+  background-image:
+    radial-gradient(circle at 25% 25%, #965a1a 6px, #1a1a1a 9px, #1a1a1a 11px, transparent 13px),
+    radial-gradient(circle at 75% 75%, #965a1a 8px, #1a1a1a 11px, #1a1a1a 14px, transparent 16px),
+    radial-gradient(circle at 80% 20%, #1a1a1a 5px, transparent 7px),
+    radial-gradient(circle at 20% 80%, #1a1a1a 6px, transparent 8px);
+  background-size: 110px 110px;
 }
 
+/* Enlagred Profile Cards & Contain Fit */
 .cat-profile-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -494,15 +514,15 @@ p {
 
 .cat-card-img-wrap {
   position: relative;
-  height: 220px;
+  height: 360px; /* Made the space much bigger */
   overflow: hidden;
-  background-color: var(--color-surface-elevated);
+  background-color: #080a09; /* Very dark background behind the image */
 }
 
 .cat-card-img-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Ensures the FULL photo fits and NOTHING is cut off */
   object-position: center;
   transition: transform 0.3s ease;
 }
@@ -620,7 +640,7 @@ p {
 
 .modal-img-wrap {
   width: 100%;
-  height: 350px;
+  height: 480px; /* Made the modal image space bigger too */
   background-color: #000;
 }
 
