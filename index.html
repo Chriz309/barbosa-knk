@@ -154,10 +154,12 @@
             <button class="cat-tab-btn" onclick="filterCatCategory('ocelots')">🌿 Our Ocelots</button>
           </div>
 
-          <!-- Dynamic Subsection Description -->
-          <div class="cat-category-intro" id="catCategoryIntro">
-            <h3 id="catCategoryTitle">Our Cheetahs</h3>
-            <p id="catCategoryDesc">Our flagship species and central focus for ethical re-wilding. Renowned for their incredible grace, agility, and sensitive nature, our cheetahs thrive in spacious natural bush camps designed to encourage instinctual behaviors.</p>
+          <!-- Dynamic Subsection Description with Fur Patterns -->
+          <div class="cat-category-intro bg-cheetah" id="catCategoryIntro">
+            <div class="cat-category-content">
+              <h3 id="catCategoryTitle">Our Cheetahs</h3>
+              <p id="catCategoryDesc">Our flagship species and central focus for ethical re-wilding. Renowned for their incredible grace, agility, and sensitive nature, our cheetahs thrive in spacious natural bush camps designed to encourage instinctual behaviors.</p>
+            </div>
           </div>
 
           <!-- Dynamic Grid of Individual Cats -->
@@ -250,6 +252,12 @@
             <span class="eyebrow">Work Alongside Experts</span>
             <h2>Barbosa K&amp;K Volunteer Programme</h2>
             <p>Live, learn, and contribute on the front lines. <strong>Every cent raised through our volunteer program is directly allocated to meat purchases, specialized veterinary diets, small cat habitats, and cheetah enclosure construction.</strong></p>
+          </div>
+
+          <!-- Why We Do It Section -->
+          <div class="volunteer-why-box">
+            <h3>Why We Do It</h3>
+            <p>Our volunteer programme exists to directly support the intense daily demands of ethical predator re-wilding. By joining us, you provide essential hands-on labor and financial support that guarantees our cats receive optimal nutrition and habitat care. To ensure stability for our animals and meaningful training for our participants, <strong>the minimum duration for the volunteer programme is 1 week</strong>.</p>
           </div>
 
           <!-- Schedule Accordion / Box -->
@@ -546,12 +554,11 @@
 
   <!-- Script for Interactive Functionality and Cat Data -->
   <script>
-    // 1. Data Store for All Individual Cats
-    // Only assigned specific images. Blank "" will trigger a clean placeholder instead of duplicates.
     const catDatabase = {
       cheetahs: {
         title: "Our Cheetahs",
         desc: "Our flagship species and central focus for ethical re-wilding. Renowned for their incredible grace, agility, and sensitive nature, our cheetahs thrive in spacious natural bush camps designed to encourage instinctual behaviors.",
+        bgClass: "bg-cheetah",
         members: [
           { name: "Katabi", gender: "Male", img: "", trait: "Gentle and observant male, son of Katja." },
           { name: "Chase", gender: "Female", img: "images/Chase.jpg", trait: "She has a short tail. Her tail bone died when she was a cub and it therefore stopped growing." },
@@ -563,7 +570,8 @@
       },
       caracals: {
         title: "Our Caracals",
-        desc: "Characterized by their striking tufted ears, reddish coats, and phenomenal jumping prowess. Our caracal enclosures provide dense brush shelter and high perches matching their native habits.",
+        desc: "Characterized by their striking tufted ears, reddish coats, and phenomenal jumping abilities. Our caracal enclosures provide dense brush shelter and high perches matching their native habits.",
+        bgClass: "bg-caracal",
         members: [
           { name: "Kane", gender: "Male", img: "", trait: "Shy but our friendliest caracal." },
           { name: "Kitsie", gender: "Female", img: "", trait: "She has a smaller and more petite face than Kazana and middle child. Youngest sister of middle child and Kazana." },
@@ -578,6 +586,7 @@
       servals: {
         title: "Our Servals",
         desc: "Known for having the longest legs and largest ears relative to their body size of any cat. Our servals enjoy tall savannah grass settings that stimulate their hearing and jumping agility.",
+        bgClass: "bg-serval",
         members: [
           { name: "Kovu", gender: "Male", img: "images/Kovu.jpg", trait: "Alert, observant, and prominent presence at Barbosa K&K." },
           { name: "Kai", gender: "Male", img: "images/Kai.jpg", trait: "His tail is bent." },
@@ -595,6 +604,7 @@
       ocelots: {
         title: "Our Ocelots",
         desc: "Masters of camouflage with magnificent rosette-patterned coats. Barbosa K&K provides enriched treetop canopies and sheltered hideouts that support their climbing instincts.",
+        bgClass: "bg-ocelot",
         members: [
           { name: "Moka", gender: "Male", img: "", trait: "Confident climber who loves observing visitors from upper branches." },
           { name: "Mara", gender: "Female", img: "", trait: "Stealthy, serene, and loves secluded canopy spots." },
@@ -606,7 +616,6 @@
       }
     };
 
-    // Render Cat Cards
     let currentCategory = 'cheetahs';
 
     function filterCatCategory(categoryKey) {
@@ -618,7 +627,10 @@
       const activeBtn = Array.from(document.querySelectorAll('.cat-tab-btn')).find(b => b.innerText.toLowerCase().includes(categoryKey));
       if (activeBtn) activeBtn.classList.add('active');
 
-      // Update Subheading
+      // Update Subheading & Background Pattern
+      const introBox = document.getElementById('catCategoryIntro');
+      introBox.className = 'cat-category-intro ' + data.bgClass;
+      
       document.getElementById('catCategoryTitle').innerText = data.title;
       document.getElementById('catCategoryDesc').innerText = data.desc;
 
@@ -631,7 +643,7 @@
         card.className = 'cat-card';
         card.onclick = () => openCatModal(categoryKey, index);
 
-        // Check if image exists, otherwise load placeholder
+        // Check if image exists, otherwise load placeholder with text
         const imageHtml = cat.img 
             ? `<img src="${cat.img}" alt="${cat.name}" loading="lazy" />` 
             : `<div class="cat-placeholder"><span>📷<br>Photo Coming Soon</span></div>`;
@@ -678,7 +690,6 @@
       modal.setAttribute('aria-hidden', 'true');
     }
 
-    // Season Toggle (Volunteer hours)
     function toggleSeason(season) {
       const winterBtn = document.getElementById('winterBtn');
       const summerBtn = document.getElementById('summerBtn');
@@ -698,7 +709,6 @@
       }
     }
 
-    // Contact Form Prefill helper
     function prefillContact(subjectText) {
       const topicSelect = document.getElementById('topic');
       const messageField = document.getElementById('message');
@@ -711,22 +721,18 @@
       navigateToSection('contact');
     }
 
-    // Smooth navigation helper
     function navigateToSection(id) {
       const el = document.getElementById(id);
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
       }
-      // Close mobile menu if open
       document.getElementById('navLinks').classList.remove('open');
     }
 
-    // Mobile nav toggle
     document.getElementById('mobileMenuBtn').addEventListener('click', () => {
       document.getElementById('navLinks').classList.toggle('open');
     });
 
-    // Initialize Cats on Load
     document.addEventListener('DOMContentLoaded', () => {
       filterCatCategory('cheetahs');
     });
