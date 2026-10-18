@@ -31,39 +31,6 @@ html {
   margin: 0 auto;
 }
 
-/* Top Announcement / Quick Contact Bar */
-.top-bar {
-  background-color: #080a09;
-  border-bottom: 1px solid var(--color-border);
-  padding: 0.45rem 0;
-  font-size: 0.82rem;
-  color: var(--color-text-muted);
-}
-
-.top-bar-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.top-bar-links {
-  display: flex;
-  gap: 1.25rem;
-}
-
-.top-bar-links a {
-  color: var(--color-accent);
-  text-decoration: none;
-  font-weight: 500;
-  transition: opacity 0.2s;
-}
-
-.top-bar-links a:hover {
-  text-decoration: underline;
-}
-
 /* Typography */
 h1, h2, h3, h4 {
   font-family: var(--font-serif);
@@ -269,6 +236,7 @@ p {
   width: 100%;
   height: 480px;
   object-fit: cover;
+  object-position: top center; /* Prevents ear cut-offs */
   border-radius: 8px;
   border: 1px solid var(--color-border);
   box-shadow: 0 16px 32px rgba(0,0,0,0.4);
@@ -339,6 +307,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center; /* Keeps ears in view */
   transition: transform 0.3s ease;
 }
 
@@ -476,17 +445,33 @@ p {
   position: relative;
   height: 220px;
   overflow: hidden;
+  background-color: var(--color-surface-elevated);
 }
 
 .cat-card-img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center; /* Keeps cat's face and ears visible */
   transition: transform 0.3s ease;
 }
 
 .cat-card:hover .cat-card-img-wrap img {
   transform: scale(1.06);
+}
+
+/* Empty State / No Image Placeholder */
+.cat-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.4;
+  background-color: var(--color-surface-elevated);
 }
 
 .cat-badge {
@@ -583,13 +568,19 @@ p {
 
 .modal-img-wrap {
   width: 100%;
-  height: 300px;
+  height: 350px;
+  background-color: #000;
 }
 
 .modal-img-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Shows full uncropped image inside the modal */
+}
+
+.modal-placeholder {
+  color: #666;
+  font-size: 1rem;
 }
 
 .modal-info {
@@ -796,6 +787,17 @@ p {
   font-weight: 700;
   color: var(--color-accent);
   margin: 0.75rem 0 1rem;
+  line-height: 1.2;
+}
+
+.fee-label {
+  display: block;
+  font-size: 0.85rem;
+  font-family: var(--font-sans);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.3rem;
 }
 
 .vol-price span {
@@ -902,6 +904,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
   min-height: 420px;
 }
 
