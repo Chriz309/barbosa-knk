@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volunteer | Barbosa K&amp;K</title>
+  <meta name="description" content="Join the Barbosa K&amp;K volunteer programme in Potchefstroom: hands-on predator care, daily routines, fees for South African and international volunteers, and a 1-week minimum stay." />
+  <meta name="theme-color" content="#0d0f0e" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Barbosa K&amp;K" />
+  <meta property="og:title" content="Volunteer | Barbosa K&amp;K" />
+  <meta property="og:description" content="Join the Barbosa K&amp;K volunteer programme in Potchefstroom: hands-on predator care, daily routines, fees for South African and international volunteers, and a 1-week minimum stay." />
+  <meta property="og:image" content="https://chriz309.github.io/barbosa-knk/images/og-image.jpg" />
+  <meta property="og:url" content="https://chriz309.github.io/barbosa-knk/volunteer.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand-logo" aria-label="Barbosa K&amp;K home">
+        <img src="images/logo.jpeg" alt="" class="brand-img" width="65" height="46" />
+        <span>Barbosa <em>K&amp;K</em></span>
+      </a>
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+      <nav class="nav-links" id="navLinks" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="cats.html">Our Cats</a>
+        <a href="tours.html">Tours &amp; Stay</a>
+        <a href="volunteer.html" class="active" aria-current="page">Volunteer</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html" class="btn btn-nav">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-hero" style="background-image:url('images/7.jpeg')">
+      <div class="container">
+        <div class="breadcrumbs"><a href="index.html">Home</a><span>/</span>Volunteer</div>
+        <span class="eyebrow">Work Alongside Experts</span>
+        <h1>Barbosa K&amp;K Volunteer Programme</h1>
+        <p>Live, learn and contribute on the front lines of predator conservation. Every cent raised goes directly to meat, veterinary diets, small-cat habitats and cheetah enclosure construction.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="volunteer-why-box reveal">
+          <h2>Why We Do It</h2>
+          <p>Our volunteer programme exists to support the intense daily demands of ethical predator re-wilding. By joining us you provide essential hands-on help and financial support that guarantees our cats receive optimal nutrition and habitat care.</p>
+          <p>To ensure stability for our animals and meaningful training for you, <strong>the minimum stay is 1 week</strong>.</p>
+        </div>
+
+        <div class="section-header reveal">
+          <span class="eyebrow">A Day in the Life</span>
+          <h2>Daily Working Routine</h2>
+        </div>
+        <div class="schedule-container reveal">
+          <div class="season-toggle-bar">
+            <span class="toggle-title">Choose a season:</span>
+            <div class="toggle-buttons">
+              <button class="season-btn active" id="winterBtn" onclick="toggleSeason('winter')" aria-pressed="true">❄️ Winter Routine</button>
+              <button class="season-btn" id="summerBtn" onclick="toggleSeason('summer')" aria-pressed="false">☀️ Summer Routine</button>
+            </div>
+          </div>
+
+          <div class="schedule-table-wrap active" id="winterSchedule">
+            <div class="schedule-header">
+              <h3>Winter Daily Timetable</h3>
+              <span class="schedule-note">Feeding time begins promptly at <strong>16:00</strong></span>
+            </div>
+            <div class="timeline-grid">
+              <div class="timeline-slot"><span class="time">07:30 – 09:00</span><span class="desc">Morning enclosure rounds: clearing leftovers, collecting bowls, water inspection and butchery prep.</span></div>
+              <div class="timeline-slot break"><span class="time">09:00 – 09:30</span><span class="desc">Tea break and team regroup.</span></div>
+              <div class="timeline-slot"><span class="time">09:30 – 13:00</span><span class="desc">Camp maintenance, game fence inspections and invasive alien plant removal.</span></div>
+              <div class="timeline-slot break"><span class="time">13:00 – 14:00</span><span class="desc">Lunch break at the guest house.</span></div>
+              <div class="timeline-slot highlight-slot"><span class="time">14:00 – 17:00</span><span class="desc">Afternoon tasks. Final meat prep begins; <strong>predator feeding takes place at 16:00</strong>.</span></div>
+            </div>
+          </div>
+
+          <div class="schedule-table-wrap" id="summerSchedule">
+            <div class="schedule-header">
+              <h3>Summer Daily Timetable</h3>
+              <span class="schedule-note">Adjusted to avoid peak heat; cats eat at <strong>17:00</strong> when temperatures drop.</span>
+            </div>
+            <div class="timeline-grid">
+              <div class="timeline-slot"><span class="time">07:30 – 09:00</span><span class="desc">Cool-morning enclosure cleaning, sanitising bowls and butchery prep.</span></div>
+              <div class="timeline-slot break"><span class="time">09:00 – 09:30</span><span class="desc">Tea break and shade rest.</span></div>
+              <div class="timeline-slot"><span class="time">09:30 – 13:00</span><span class="desc">Field maintenance and reserve duties before the midday heat.</span></div>
+              <div class="timeline-slot break"><span class="time">13:00 – 15:00</span><span class="desc">Extended midday break to rest and stay out of the hot summer sun.</span></div>
+              <div class="timeline-slot highlight-slot"><span class="time">15:00 – 18:00</span><span class="desc">Late-afternoon shift. Feeding prep starts; <strong>predator feeding takes place at 17:00</strong>.</span></div>
+            </div>
+          </div>
+          <p class="schedule-footer-note"><em>* Volunteers work 7 days a week, with time off on Saturdays from 12:00 until feeding time, and on Sunday afternoons after the morning rounds.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Programme Fees</span>
+          <h2>Choose Your Programme</h2>
+        </div>
+        <div class="volunteer-comparison-grid">
+          <div class="vol-card reveal">
+            <h3>🇿🇦 South African Volunteers</h3>
+            <div class="vol-price"><span class="fee-label">Programme fee</span>R700 <span>/ day</span></div>
+            <p>A subsidised placement fee for local wildlife caretakers and conservation students.</p>
+            <ul class="clean-list">
+              <li>Includes comfortable guest house accommodation on the reserve.</li>
+              <li>Contributes to running costs, enclosures and veterinary nutrition.</li>
+              <li>Valid South African medical aid required.</li>
+              <li>Full payment confirms your placement on your selected dates.</li>
+            </ul>
+            <a href="contact.html?topic=Volunteer&amp;msg=Hello%20Barbosa%20K%26K%2C%20I%20would%20like%20to%20apply%20for%20the%20volunteer%20programme%20as%20a%20South%20African%20volunteer.%20My%20preferred%20dates%20are%3A%20" class="btn btn-secondary btn-block">Apply (South African)</a>
+          </div>
+          <div class="vol-card featured reveal">
+            <span class="badge">International Applicants</span>
+            <h3>🌍 International Volunteers</h3>
+            <div class="vol-price"><span class="fee-label">Programme fee</span>R800 <span>/ day</span></div>
+            <p>An immersive African wildlife conservation experience for volunteers from around the world.</p>
+            <ul class="clean-list">
+              <li>Includes guest house accommodation and groceries/meals.</li>
+              <li>Directly funds cat food, enclosure builds and meat supplies.</li>
+              <li>International travel and medical insurance required.</li>
+              <li>A 50% deposit secures your placement after the initial evaluation document.</li>
+            </ul>
+            <a href="contact.html?topic=Volunteer&amp;msg=Hello%20Barbosa%20K%26K%2C%20I%20would%20like%20to%20apply%20for%20the%20volunteer%20programme%20as%20an%20international%20volunteer.%20My%20preferred%20dates%20are%3A%20" class="btn btn-primary btn-block">Apply (International)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="estimator reveal" id="estimator">
+          <div class="estimator-controls">
+            <span class="eyebrow">Plan Your Stay</span>
+            <h2>Volunteer Cost Calculator</h2>
+            <p>Get a quick estimate of your programme fee. The minimum stay is 7 days.</p>
+            <label>I am a…</label>
+            <div class="seg" role="group" aria-label="Volunteer type">
+              <button type="button" class="active" data-type="sa">South African</button>
+              <button type="button" data-type="intl">International</button>
+            </div>
+            <label for="estDays">Length of stay</label>
+            <div class="range-row">
+              <input type="range" id="estDays" min="7" max="90" value="14" />
+              <span class="range-val" id="estDaysOut">14 days</span>
+            </div>
+          </div>
+          <div class="estimate-out" aria-live="polite">
+            <small>Estimated programme fee</small>
+            <span class="total" id="estTotal">R9 800</span>
+            <small id="estNote"></small>
+            <a class="btn btn-primary btn-block" id="estApply" href="contact.html?topic=Volunteer">Apply for These Dates</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Getting Started</span>
+          <h2>How to Apply</h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal"><h3>Send an Enquiry</h3><p>Tell us your preferred dates and whether you're a South African or international volunteer.</p></div>
+          <div class="step reveal"><h3>Evaluation</h3><p>International applicants complete an initial evaluation document so we can confirm a good fit.</p></div>
+          <div class="step reveal"><h3>Secure Your Place</h3><p>South Africans pay in full to confirm their dates; international volunteers pay a 50% deposit.</p></div>
+          <div class="step reveal"><h3>Join the Team</h3><p>Arrive, settle into the guest house and start learning the daily routine alongside our caretakers.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal"><span class="eyebrow">Good to Know</span><h2>Volunteer FAQ</h2></div>
+        <div class="faq reveal">
+          <details><summary>What is the minimum stay?</summary><p>One week. This gives the animals stability and gives you enough time to learn the routine properly.</p></details>
+          <details><summary>What will I actually be doing?</summary><p>Morning enclosure rounds, cleaning and refilling water, butchery and meat prep, camp and fence maintenance, removing invasive plants, and helping at predator feeding every afternoon.</p></details>
+          <details><summary>Do I get time off?</summary><p>Volunteers work 7 days a week, with Saturdays off from 12:00 until feeding time and Sunday afternoons off after the morning rounds.</p></details>
+          <details><summary>Where will I stay?</summary><p>In the reserve guest house. For international volunteers, groceries/meals are included in the fee.</p></details>
+          <details><summary>What insurance do I need?</summary><p>South African volunteers need valid South African medical aid. International volunteers need international travel and medical insurance.</p></details>
+          <details><summary>Will I be able to touch the cats?</summary><p>Our zero-exploitation policy means the focus is on care, not contact. You'll work closely with the cats' daily needs under staff supervision.</p></details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-contact-bar">
+        <div class="footer-col">
+          <div class="footer-brand"><img src="images/logo.jpeg" alt="" /><h4 style="margin:0">Barbosa K&amp;K</h4></div>
+          <p>Conserving the African cheetah and wild small cats through science and stewardship.</p>
+          <p>Plot 17, Wilgeboom, Potchefstroom, 2531<br>North West Province, South Africa</p>
+        </div>
+        <div class="footer-col">
+          <h4>Direct Contact</h4>
+          <p>Email: <a href="mailto:barbosaKnK@gmail.com">barbosaKnK@gmail.com</a></p>
+          <p>WhatsApp: <a href="https://wa.me/27655591257" target="_blank" rel="noopener">065 559 1257</a></p>
+          <p>Visits strictly by appointment.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <div class="footer-quick-links">
+            <a href="about.html">About Us</a>
+            <a href="cats.html">Meet Our Cats</a>
+            <a href="tours.html">Tours &amp; Stay</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="donate.html">Donate</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Feeding Tours</h4>
+          <p>Daily, afternoons</p>
+          <p>Winter: 4:00 PM<br>Summer: 5:00 PM</p>
+          <p><a href="tours.html">Prices &amp; booking &rarr;</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom-copy">
+        <p>&copy; <span data-year>2026</span> Barbosa K&amp;K. All rights reserved.</p>
+        <p>Strictly non-petting &middot; Ethical predator conservation</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/27655591257" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.66 15l-1.3 4.76 4.88-1.28A10 10 0 1 0 12 2zm5.2 13.9c-.22.62-1.28 1.18-1.77 1.23-.47.06-.92.22-3.1-.65-2.6-1.03-4.27-3.68-4.4-3.85-.13-.17-1.05-1.4-1.05-2.67s.67-1.9.9-2.16c.24-.26.52-.33.7-.33h.5c.16 0 .38-.06.6.46.22.53.75 1.83.82 1.96.06.13.1.29.02.46-.09.17-.13.28-.26.43l-.39.45c-.13.13-.27.27-.12.53.15.26.68 1.12 1.46 1.81 1 .89 1.85 1.17 2.11 1.3.26.13.42.11.57-.07.16-.17.66-.77.83-1.03.17-.27.35-.22.58-.13.24.08 1.52.72 1.78.85.26.13.43.2.5.3.06.12.06.66-.16 1.29z"/></svg></a>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

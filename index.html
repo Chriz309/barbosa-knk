@@ -1,741 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Barbosa K&amp;K | Predator Conservation, Breeding &amp; Sanctuary</title>
-  <meta name="description" content="Barbosa K&amp;K is a premier South African sanctuary and research reserve dedicated to cheetah re-wilding, predator rescue, and ethical conservation in Potchefstroom." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Barbosa K&amp;K is a South African sanctuary and research reserve in Potchefstroom dedicated to cheetah re-wilding, ethical predator care and the conservation of wild small cats." />
+  <meta name="theme-color" content="#0d0f0e" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Barbosa K&amp;K" />
+  <meta property="og:title" content="Barbosa K&amp;K | Predator Conservation, Breeding &amp; Sanctuary" />
+  <meta property="og:description" content="Barbosa K&amp;K is a South African sanctuary and research reserve in Potchefstroom dedicated to cheetah re-wilding, ethical predator care and the conservation of wild small cats." />
+  <meta property="og:image" content="https://chriz309.github.io/barbosa-knk/images/og-image.jpg" />
+  <meta property="og:url" content="https://chriz309.github.io/barbosa-knk/" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Navigation -->
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="#home" class="brand-logo" onclick="switchView('home')">
-        <img src="images/logo.jpeg" alt="Barbosa K&amp;K Logo" class="brand-img" onerror="this.src='images/logo.png'" />
+      <a href="index.html" class="brand-logo" aria-label="Barbosa K&amp;K home">
+        <img src="images/logo.jpeg" alt="" class="brand-img" width="65" height="46" />
         <span>Barbosa <em>K&amp;K</em></span>
       </a>
-      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">☰</button>
-      <nav class="nav-links" id="navLinks">
-        <a href="#about" onclick="navigateToSection('about')">About</a>
-        <a href="#cats" onclick="navigateToSection('cats')">Meet Our Cats</a>
-        <a href="#tours" onclick="navigateToSection('tours')">Tours &amp; Stay</a>
-        <a href="#volunteer" onclick="navigateToSection('volunteer')">Volunteer</a>
-        <a href="#donate" onclick="navigateToSection('donate')">Donate</a>
-        <a href="#contact" class="btn btn-nav" onclick="navigateToSection('contact')">Contact Us</a>
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+      <nav class="nav-links" id="navLinks" aria-label="Main">
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="cats.html">Our Cats</a>
+        <a href="tours.html">Tours &amp; Stay</a>
+        <a href="volunteer.html">Volunteer</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html" class="btn btn-nav">Contact Us</a>
       </nav>
     </div>
   </header>
 
-  <!-- Main View Container -->
-  <main>
-    <!-- ================= HOME / OVERVIEW SECTION ================= -->
-    <div id="home-view" class="page-view active">
-      
-      <!-- Hero Section -->
-      <section class="hero" id="home">
-        <div class="container hero-content">
-          <span class="badge">North West Province, South Africa</span>
-          <h1>Defending Cheetahs, Securing the Wild</h1>
-          <p>A science-backed sanctuary dedicated to ethical feline care, cheetah re-wilding, and safeguarding indigenous small predators for generations to come.</p>
-          <div class="hero-actions">
-            <button class="btn btn-primary" onclick="navigateToSection('tours')">Book a Predator Tour</button>
-            <button class="btn btn-secondary" onclick="navigateToSection('cats')">Meet Our Cats</button>
-            <button class="btn btn-accent-outline" onclick="navigateToSection('volunteer')">Volunteer With Us</button>
-          </div>
-        </div>
-      </section>
+  <main id="main">
 
-      <!-- Mission Statement -->
-      <section id="about" class="section mission">
-        <div class="container grid-split">
-          <div class="mission-text">
-            <span class="eyebrow">Moral Stewardship</span>
-            <h2>Ethics First in Biological Conservation</h2>
-            <p>At Barbosa K&amp;K, biological ethics take precedence. Our primary mandate is the intentional re-wilding of captive-bred cheetahs whose lineages will replenish protected African wilderness areas.</p>
-            <p>We combine advanced feline nutrition, data-driven reproductive genetics, and expansive natural enclosures to ensure our cheetahs, caracals, servals, and ocelots flourish.</p>
-            <div class="mission-highlight-card">
-              <ul class="clean-list">
-                <li><strong>Re-wilding Focus:</strong> Preparing offspring for wild habitat release.</li>
-                <li><strong>Zero-Exploitation Policy:</strong> Strictly non-petting; respectful animal observation under staff supervision.</li>
-                <li><strong>Diverse Ecosystem:</strong> A functioning reserve supporting 8 game species alongside our predator families.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="media-frame">
-            <img src="images/5.jpeg" alt="Cheetah in sanctuary habitat" class="rounded-img" />
-          </div>
-        </div>
-      </section>
-
-      <!-- Key Pillars / Programs -->
-      <section id="pillars" class="section pillars-section">
-        <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">Get Involved</span>
-            <h2>Ways to Experience &amp; Support Barbosa K&amp;K</h2>
-          </div>
-          <div class="grid-cards">
-            
-            <div class="card">
-              <div class="card-img-wrap">
-                <img src="images/1.jpeg" alt="Cheetah tour encounter" />
-              </div>
-              <div class="card-body">
-                <h3>Predator Feeding Tours</h3>
-                <p>Witness dusk predator feeding sessions. Adults R200, Children R100, Under 6 Free.</p>
-                <button class="card-link-btn" onclick="navigateToSection('tours')">Tour Details &rarr;</button>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card-img-wrap">
-                <img src="images/7.jpeg" alt="Volunteer working with cats" />
-              </div>
-              <div class="card-body">
-                <h3>Volunteering Hub</h3>
-                <p>Live on-site in Potchefstroom. Hands-on meat prep, enrichment, and enclosure care.</p>
-                <button class="card-link-btn" onclick="navigateToSection('volunteer')">Volunteer Program &rarr;</button>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card-img-wrap">
-                <img src="images/17.jpeg" alt="Support predator nutrition" />
-              </div>
-              <div class="card-body">
-                <h3>Support &amp; Donate</h3>
-                <p>100% of donations directly buy fresh meat, veterinary care, and enclosure expansions.</p>
-                <button class="card-link-btn" onclick="navigateToSection('donate')">Donate Now &rarr;</button>
-              </div>
-            </div>
-
-            <div class="card">
-              <div class="card-img-wrap">
-                <img src="images/21.jpeg" alt="Meet our cat family" />
-              </div>
-              <div class="card-body">
-                <h3>Meet the Cats</h3>
-                <p>Explore profiles of our cheetahs, caracals, servals, and ocelots residing on the reserve.</p>
-                <button class="card-link-btn" onclick="navigateToSection('cats')">Explore Profiles &rarr;</button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- Dynamic Marquee -->
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee-track">
-          <span>ETHICAL RE-WILDING &bull; PRESERVE THE WILD &bull; 100% DIRECT CARE &bull; POTCHEFSTROOM CONSERVATION &bull; SAFEGUARD OUR HERITAGE &bull; </span>
-          <span>ETHICAL RE-WILDING &bull; PRESERVE THE WILD &bull; 100% DIRECT CARE &bull; POTCHEFSTROOM CONSERVATION &bull; SAFEGUARD OUR HERITAGE &bull; </span>
+    <section class="hero">
+      <div class="hero-slides" aria-hidden="true">
+        <img src="images/17.jpeg" alt="" class="active" />
+        <img src="images/6.jpeg" alt="" />
+        <img src="images/4.jpeg" alt="" />
+      </div>
+      <div class="container hero-content">
+        <span class="badge">Potchefstroom &middot; North West Province, South Africa</span>
+        <h1>Defending Cheetahs, Securing the Wild</h1>
+        <p>A science-backed sanctuary dedicated to ethical feline care, cheetah re-wilding and safeguarding wild small cats for generations to come.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tours.html">Book a Predator Tour</a>
+          <a class="btn btn-secondary" href="cats.html">Meet Our Cats</a>
+          <a class="btn btn-accent-outline" href="volunteer.html">Volunteer With Us</a>
         </div>
       </div>
+    </section>
 
-      <!-- ================= MEET OUR CATS SECTION ================= -->
-      <section id="cats" class="section cats-hub-section">
-        <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">Sanctuary Inhabitants</span>
-            <h2>Meet Our Cats</h2>
-            <p>A closer look at our cheetahs, servals, caracals, and ocelots protected at Barbosa K&amp;K.</p>
-          </div>
+    <section class="stats-strip" aria-label="Barbosa K&amp;K at a glance">
+      <div class="container stats-grid">
+        <div class="stat"><span class="stat-num">2016</span><span class="stat-label">Founded</span></div>
+        <div class="stat"><span class="stat-num" data-count="31">31</span><span class="stat-label">Resident cats</span></div>
+        <div class="stat"><span class="stat-num" data-count="4">4</span><span class="stat-label">Wild cat species</span></div>
+        <div class="stat"><span class="stat-num" data-count="8">8</span><span class="stat-label">Game species on reserve</span></div>
+      </div>
+    </section>
 
-          <!-- Interactive Category Tabs -->
-          <div class="cat-tabs" role="tablist">
-            <button class="cat-tab-btn active" onclick="filterCatCategory('cheetahs')">🐆 Our Cheetahs</button>
-            <button class="cat-tab-btn" onclick="filterCatCategory('caracals')">🐱 Our Caracals</button>
-            <button class="cat-tab-btn" onclick="filterCatCategory('servals')">🐾 Our Servals</button>
-            <button class="cat-tab-btn" onclick="filterCatCategory('ocelots')">🌿 Our Ocelots</button>
+    <section class="section mission">
+      <div class="container grid-split">
+        <div class="mission-text reveal">
+          <span class="eyebrow">Moral Stewardship</span>
+          <h2>Ethics First in Biological Conservation</h2>
+          <p>At Barbosa K&amp;K, biological ethics take precedence. Our primary mandate is the intentional re-wilding of captive-bred cheetahs whose lineages will replenish protected African wilderness areas.</p>
+          <p>We combine advanced feline nutrition, data-driven reproductive genetics and expansive natural enclosures to ensure our cheetahs, caracals, servals and ocelots flourish.</p>
+          <div class="highlight-card">
+            <ul class="clean-list">
+              <li><strong>Re-wilding focus:</strong> preparing offspring for release into wild habitat.</li>
+              <li><strong>Zero-exploitation policy:</strong> strictly non-petting; respectful observation under staff supervision.</li>
+              <li><strong>Diverse ecosystem:</strong> a working reserve supporting 8 game species alongside our predator families.</li>
+            </ul>
           </div>
-
-          <!-- Dynamic Subsection Description with Fur Patterns -->
-          <div class="cat-category-intro bg-cheetah" id="catCategoryIntro">
-            <div class="cat-category-content">
-              <h3 id="catCategoryTitle">Our Cheetahs</h3>
-              <p id="catCategoryDesc">Our flagship species and central focus for ethical re-wilding. Renowned for their incredible grace, agility, and sensitive nature, our cheetahs thrive in spacious natural bush camps designed to encourage instinctual behaviors.</p>
-            </div>
-          </div>
-
-          <!-- Dynamic Grid of Individual Cats -->
-          <div class="cat-profile-grid" id="catGridContainer">
-            <!-- Injected via JavaScript -->
-          </div>
+          <a href="about.html" class="btn btn-accent-outline" style="margin-top:1.75rem">More About Us</a>
         </div>
-      </section>
-
-      <!-- Founder Section -->
-      <section id="story" class="section founder-section">
-        <div class="container">
-          <div class="founder-card-grid">
-            <div class="founder-media">
-              <img src="images/20.jpeg" alt="Dr. Diana du Cros with cheetah" class="founder-img" />
-            </div>
-            <div class="founder-text">
-              <span class="eyebrow">The Origin Story</span>
-              <h2>Dr. Diana du Cros</h2>
-              <p class="lead">A distinguished scientist in biology and protein biochemistry who redirected her life's work toward the protection of vulnerable predators.</p>
-              <p>Transitioning from specialized international research laboratories across the United States and Australia, Dr. du Cros established operations in Potchefstroom with an unambiguous mandate: halt the trajectory toward cheetah extinction.</p>
-              <p>In 2016, she dedicated her personal resources to establish Barbosa K&amp;K. Today, the facility serves as a benchmark for predator well-being, scientific breeding, and applied wildlife management.</p>
-            </div>
-          </div>
+        <div class="media-stack reveal">
+          <img src="images/5.jpeg" alt="Cheetah looking into the camera" class="rounded-img" />
+          <img src="images/2.jpeg" alt="Caracal close-up" class="float-img" loading="lazy" />
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- ================= TOURS & SAFARI SUITES SECTION ================= -->
-      <section id="tours" class="section tours-section">
-        <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">Predator Feeding Experience &amp; Stays</span>
-            <h2>Visits, Tours &amp; Accommodation</h2>
-            <p>Experience the majesty of South Africa's predators responsibly under expert veterinary and caretaker supervision.</p>
-          </div>
-
-          <div class="grid-split">
-            <!-- Tour Pricing Card -->
-            <div class="pricing-card">
-              <span class="badge">Daily Afternoon Experience</span>
-              <h3>Predator Feeding Tour</h3>
-              <p>Join our specialists during daily feeding. Learn the distinctive dietary requirements, behaviors, and conservation status of our feline residents.</p>
-              
-              <div class="price-breakdown">
-                <div class="price-item">
-                  <span class="target">Adults (18+)</span>
-                  <span class="cost">R200</span>
-                </div>
-                <div class="price-item">
-                  <span class="target">Children (6 – 18)</span>
-                  <span class="cost">R100</span>
-                </div>
-                <div class="price-item highlight">
-                  <span class="target">Kids Under 6</span>
-                  <span class="cost">FREE</span>
-                </div>
-              </div>
-
-              <div class="tour-timings">
-                <strong>🕒 Tour Times:</strong>
-                <p>Starts at <strong>4:00 PM</strong> (Winter) or <strong>5:00 PM</strong> (Summer), scheduled according to ambient heat for predator comfort.</p>
-              </div>
-
-              <a href="https://wa.me/27655591257?text=Hi%20Barbosa%20KnK,%20I%20would%20like%20to%20book%20a%20Predator%20Feeding%20Tour." target="_blank" class="btn btn-primary btn-block">Book Tour via WhatsApp</a>
-            </div>
-
-            <!-- Safari Suites Card -->
-            <div class="pricing-card">
-              <span class="badge">Reserve Hospitality</span>
-              <h3>Safari Suites Accommodation</h3>
-              <p>Wake up to the sounds of the African bushveld. Our guest accommodation offers quiet surroundings nestled on the reserve grounds, complete with self-catering amenities.</p>
-              
-              <ul class="clean-list" style="margin: 1.5rem 0;">
-                <li>Comfortable on-reserve rooms surrounded by peaceful nature.</li>
-                <li>Weekly housekeeping and complete self-catering kitchen access.</li>
-                <li>Exclusive early morning atmosphere with 8 species of game animals.</li>
-                <li>Strict advance reservations to safeguard animal quiet hours.</li>
-              </ul>
-
-              <a href="#contact" class="btn btn-secondary btn-block" onclick="prefillContact('Safari Suites Booking')">Inquire About Stay Dates</a>
-            </div>
-          </div>
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Get Involved</span>
+          <h2>Ways to Experience &amp; Support Barbosa K&amp;K</h2>
         </div>
-      </section>
-
-      <!-- ================= VOLUNTEER PROGRAM SECTION ================= -->
-      <section id="volunteer" class="section volunteer-section">
-        <div class="container">
-          <div class="section-header">
-            <span class="eyebrow">Work Alongside Experts</span>
-            <h2>Barbosa K&amp;K Volunteer Programme</h2>
-            <p>Live, learn, and contribute on the front lines. <strong>Every cent raised through our volunteer program is directly allocated to meat purchases, specialized veterinary diets, small cat habitats, and cheetah enclosure construction.</strong></p>
-          </div>
-
-          <!-- Why We Do It Section -->
-          <div class="volunteer-why-box">
-            <h3>Why We Do It</h3>
-            <p>Our volunteer programme exists to directly support the intense daily demands of ethical predator re-wilding. By joining us, you provide essential hands-on labor and financial support that guarantees our cats receive optimal nutrition and habitat care. To ensure stability for our animals and meaningful training for our participants, <strong>the minimum duration for the volunteer programme is 1 week</strong>.</p>
-          </div>
-
-          <!-- Schedule Accordion / Box -->
-          <div class="schedule-container">
-            <div class="season-toggle-bar">
-              <span class="toggle-title">View Daily Working Routine:</span>
-              <div class="toggle-buttons">
-                <button class="season-btn active" id="winterBtn" onclick="toggleSeason('winter')">❄️ Winter Routine</button>
-                <button class="season-btn" id="summerBtn" onclick="toggleSeason('summer')">☀️ Summer Routine</button>
-              </div>
+        <div class="grid-cards">
+          <a class="card reveal" href="tours.html">
+            <div class="card-img-wrap"><img src="images/3.jpeg" alt="Cheetah resting in the shade" loading="lazy" /></div>
+            <div class="card-body">
+              <h3>Predator Feeding Tours</h3>
+              <p>Watch our afternoon predator feeding. Adults R200, children R100, under 6 free.</p>
+              <span class="card-link">Tour details &rarr;</span>
             </div>
-
-            <!-- Winter Schedule -->
-            <div class="schedule-table-wrap active" id="winterSchedule">
-              <div class="schedule-header">
-                <h4>Winter Daily Timetable</h4>
-                <span class="schedule-note">Feeding time begins promptly at <strong>16:00</strong></span>
-              </div>
-              <div class="timeline-grid">
-                <div class="timeline-slot">
-                  <span class="time">07:30 – 09:00</span>
-                  <span class="desc">Morning enclosure rounds: clearing leftovers, collecting bowls, water inspection &amp; butchery prep.</span>
-                </div>
-                <div class="timeline-slot break">
-                  <span class="time">09:00 – 09:30</span>
-                  <span class="desc">Tea break and team regroup.</span>
-                </div>
-                <div class="timeline-slot">
-                  <span class="time">09:30 – 13:00</span>
-                  <span class="desc">Camp maintenance, game fence inspections, and invasive alien plant removal.</span>
-                </div>
-                <div class="timeline-slot break">
-                  <span class="time">13:00 – 14:00</span>
-                  <span class="desc">Lunch break at the Guest House.</span>
-                </div>
-                <div class="timeline-slot highlight-slot">
-                  <span class="time">14:00 – 17:00</span>
-                  <span class="desc">Afternoon task assignments. Final meat prep begins; <strong>predator feeding takes place at 16:00</strong>.</span>
-                </div>
-              </div>
+          </a>
+          <a class="card reveal" href="volunteer.html">
+            <div class="card-img-wrap"><img src="images/7.jpeg" alt="Serval profile" loading="lazy" /></div>
+            <div class="card-body">
+              <h3>Volunteer Programme</h3>
+              <p>Live on site in Potchefstroom. Hands-on meat prep, enrichment and enclosure care.</p>
+              <span class="card-link">Volunteer programme &rarr;</span>
             </div>
-
-            <!-- Summer Schedule -->
-            <div class="schedule-table-wrap" id="summerSchedule">
-              <div class="schedule-header">
-                <h4>Summer Daily Timetable</h4>
-                <span class="schedule-note">Adjusted to avoid peak heat; cats eat at <strong>17:00</strong> when temperatures drop.</span>
-              </div>
-              <div class="timeline-grid">
-                <div class="timeline-slot">
-                  <span class="time">07:30 – 09:00</span>
-                  <span class="desc">Early cool-morning enclosure cleaning, sanitizing bowls, and butchery prep.</span>
-                </div>
-                <div class="timeline-slot break">
-                  <span class="time">09:00 – 09:30</span>
-                  <span class="desc">Tea break and shade rest.</span>
-                </div>
-                <div class="timeline-slot">
-                  <span class="time">09:30 – 13:00</span>
-                  <span class="desc">Field maintenance and reserve duties before midday heat.</span>
-                </div>
-                <div class="timeline-slot break">
-                  <span class="time">13:00 – 15:00</span>
-                  <span class="desc">Extended midday heat break to stay rested and protected from hot summer sun.</span>
-                </div>
-                <div class="timeline-slot highlight-slot">
-                  <span class="time">15:00 – 18:00</span>
-                  <span class="desc">Late afternoon work shift. Final feeding preparation starts; <strong>predator feeding takes place at 17:00</strong>.</span>
-                </div>
-              </div>
+          </a>
+          <a class="card reveal" href="donate.html">
+            <div class="card-img-wrap"><img src="images/8.jpeg" alt="Cheetah walking through long grass" loading="lazy" /></div>
+            <div class="card-body">
+              <h3>Support &amp; Donate</h3>
+              <p>100% of donations go directly to fresh meat, veterinary care and enclosure expansions.</p>
+              <span class="card-link">Donate now &rarr;</span>
             </div>
-            
-            <p class="schedule-footer-note"><em>* Note: Volunteers operate 7 days a week, with off-time on Saturdays from 12:00 to feeding time, and Sunday afternoons following morning rounds.</em></p>
-          </div>
-
-          <!-- South Africa vs International Pricing Comparison -->
-          <div class="volunteer-comparison-grid">
-            <div class="vol-card">
-              <h3>🇿🇦 South African Volunteers</h3>
-              <div class="vol-price">
-                <span class="fee-label">Programme Fee:</span><br>
-                R700 <span>/ day</span>
-              </div>
-              <p>Specially subsidized placement fee for local wildlife caretakers and conservation students.</p>
-              <ul class="clean-list">
-                <li>Includes comfortable reserve guest house accommodation.</li>
-                <li>Contribution to running costs, enclosures, and veterinary nutrition.</li>
-                <li>Valid South African Medical Aid required.</li>
-                <li>Full payment confirms your placement on selected dates.</li>
-              </ul>
-              <a href="#contact" class="btn btn-secondary btn-block" onclick="prefillContact('South African Volunteer Application')">Apply (SA National)</a>
+          </a>
+          <a class="card reveal" href="cats.html">
+            <div class="card-img-wrap"><img src="images/21.jpeg" alt="Cheetah portrait" loading="lazy" /></div>
+            <div class="card-body">
+              <h3>Meet the Cats</h3>
+              <p>Explore profiles of the cheetahs, caracals, servals and ocelots living on the reserve.</p>
+              <span class="card-link">Explore profiles &rarr;</span>
             </div>
-
-            <div class="vol-card featured">
-              <span class="badge">International Applicants</span>
-              <h3>🌍 International Volunteers</h3>
-              <div class="vol-price">
-                <span class="fee-label">Programme Fee:</span><br>
-                R800 <span>/ day</span>
-              </div>
-              <p>Immersive African wildlife conservation experience for global volunteers.</p>
-              <ul class="clean-list">
-                <li>Includes guest house accommodation &amp; purchased groceries/meals.</li>
-                <li>Direct contribution to cat food, enclosure builds, and meat supplies.</li>
-                <li>International travel and medical insurance required.</li>
-                <li>50% deposit secures placement following initial evaluation document.</li>
-              </ul>
-              <a href="#contact" class="btn btn-primary btn-block" onclick="prefillContact('International Volunteer Application')">Apply (International)</a>
-            </div>
-          </div>
+          </a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- ================= DONATIONS SECTION ================= -->
-      <section id="donate" class="section donate-section">
-        <div class="container">
-          <div class="donate-box">
-            <span class="eyebrow">Fuel Our Conservation</span>
-            <h2>Direct-Impact Donations</h2>
-            <p class="donate-lead">We operate with lean overhead and transparent stewardship. Every South African Rand or foreign contribution directly purchases quality game meat, veterinary care, and anti-predator perimeter fencing.</p>
-
-            <div class="impact-grid">
-              <div class="impact-item">
-                <h4>🥩 Predator Meat &amp; Nutrition</h4>
-                <p>Purchasing fresh game cuts and whole poultry needed to maintain lean muscle and natural feline digestive health.</p>
-              </div>
-              <div class="impact-item">
-                <h4>🌿 Small Cat Habitats</h4>
-                <p>Enriching serval, caracal, and ocelot enclosures with natural logs, water pools, and high vantage climbing frames.</p>
-              </div>
-              <div class="impact-item">
-                <h4>🩺 Dedicated Veterinary Care</h4>
-                <p>Vaccinations, reproductive assessments, regular parasite treatments, and 24/7 wildlife emergency standby.</p>
-              </div>
-            </div>
-
-            <div class="donate-card-actions">
-              <div class="bank-details-card">
-                <h3>Direct EFT / Bank Transfer Support</h3>
-                <p>To transfer support directly or discuss monthly food sponsorship, please reach out via our finance desk:</p>
-                <div class="contact-pill-list">
-                  <a href="mailto:barbosaKnK@gmail.com?subject=Donation%20Inquiry" class="contact-pill">✉️ barbosaKnK@gmail.com</a>
-                  <a href="https://wa.me/27655591257?text=Hi%20Barbosa%20KnK,%20I%20would%20like%20to%20make%20a%20donation%20or%20sponsor%20meat." target="_blank" class="contact-pill">💬 WhatsApp: 065 559 1257</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= CONTACT & MAP SECTION ================= -->
-      <section id="contact" class="section contact-section">
-        <div class="container grid-split">
-          
-          <div class="contact-info">
-            <span class="eyebrow">Plan Your Visit</span>
-            <h2>Find Us in Potchefstroom</h2>
-            <p>Visits and tours are strictly by prior appointment to safeguard the welfare and quiet privacy of our re-wilding camps.</p>
-            
-            <div class="location-details">
-              <div class="detail-row">
-                <strong>📍 Reserve Address:</strong>
-                <p>Plot 17, Wilgeboom, Potchefstroom, 2531, North West Province, South Africa</p>
-              </div>
-              <div class="detail-row">
-                <strong>✉️ Email Address:</strong>
-                <p><a href="mailto:barbosaKnK@gmail.com">barbosaKnK@gmail.com</a></p>
-              </div>
-              <div class="detail-row">
-                <strong>💬 WhatsApp &amp; Calls:</strong>
-                <p><a href="https://wa.me/27655591257" target="_blank">065 559 1257</a></p>
-              </div>
-            </div>
-
-            <!-- Google Maps Embed Pin -->
-            <div class="map-embed-container">
-              <iframe 
-                title="Barbosa K&amp;K Location Map"
-                src="https://maps.google.com/maps?q=Plot+17+Wilgeboom+Potchefstroom+2531&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                width="100%" 
-                height="280" 
-                style="border:0; border-radius: 8px;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
-            </div>
-          </div>
-
-          <div class="form-card">
-            <h3 style="margin-bottom: 1.5rem;">Send Us a Message</h3>
-            <form action="https://api.web3forms.com/submit" method="POST" class="inquiry-form">
-              <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-              
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="first-name">First Name *</label>
-                  <input type="text" id="first-name" name="first_name" required placeholder="John" />
-                </div>
-                <div class="form-group">
-                  <label for="last-name">Last Name *</label>
-                  <input type="text" id="last-name" name="last_name" required placeholder="Doe" />
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" required placeholder="john@example.com" />
-              </div>
-
-              <div class="form-group">
-                <label for="phone">Phone Number (WhatsApp)</label>
-                <input type="tel" id="phone" name="phone" placeholder="+27 65 559 1257" />
-              </div>
-
-              <div class="form-group">
-                <label for="topic">Inquiry Type</label>
-                <select id="topic" name="inquiry_type" class="custom-select">
-                  <option value="Tours">Predator Feeding Tour</option>
-                  <option value="Volunteer">Volunteer Programme</option>
-                  <option value="Safari Suites">Safari Suites Accommodation</option>
-                  <option value="Donation">Donation / Meat Sponsorship</option>
-                  <option value="General">General Inquiry</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="message">Message *</label>
-                <textarea id="message" name="message" rows="4" required placeholder="Tell us about your requested dates, number of guests, or inquiry..."></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-block">Submit Inquiry</button>
-            </form>
-          </div>
-
-        </div>
-      </section>
-
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>ETHICAL RE-WILDING &bull; PRESERVE THE WILD &bull; 100% DIRECT CARE &bull; POTCHEFSTROOM CONSERVATION &bull; SAFEGUARD OUR HERITAGE &bull; </span>
+        <span>ETHICAL RE-WILDING &bull; PRESERVE THE WILD &bull; 100% DIRECT CARE &bull; POTCHEFSTROOM CONSERVATION &bull; SAFEGUARD OUR HERITAGE &bull; </span>
+      </div>
     </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Sanctuary Residents</span>
+          <h2>A Few Familiar Faces</h2>
+          <p>Every cat at Barbosa K&amp;K has a name, a story and a personality. Tap a face to read theirs.</p>
+        </div>
+        <div class="featured-cats reveal">
+          <a class="featured-cat" href="cats.html?cat=Chase#cheetahs"><img src="images/Chase.jpg" alt="Chase the cheetah" loading="lazy" style="object-position:60% 60%" /><div class="featured-cat-label"><span>Cheetah</span><strong>Chase</strong></div></a>
+          <a class="featured-cat" href="cats.html?cat=Kane#caracals"><img src="images/Kane.jpg" alt="Kane the caracal" loading="lazy" /><div class="featured-cat-label"><span>Caracal</span><strong>Kane</strong></div></a>
+          <a class="featured-cat" href="cats.html?cat=Kovu#servals"><img src="images/Kovu.jpg" alt="Kovu the serval" loading="lazy" /><div class="featured-cat-label"><span>Serval</span><strong>Kovu</strong></div></a>
+          <a class="featured-cat" href="cats.html?cat=Maya#ocelots"><img src="images/Maya.jpg" alt="Maya the ocelot" loading="lazy" style="object-position:40% 50%" /><div class="featured-cat-label"><span>Ocelot</span><strong>Maya</strong></div></a>
+          <a class="featured-cat" href="cats.html?cat=Kassie#cheetahs"><img src="images/Kassie.jpg" alt="Kassie the cheetah" loading="lazy" style="object-position:55% 60%" /><div class="featured-cat-label"><span>Cheetah</span><strong>Kassie</strong></div></a>
+        </div>
+        <div class="text-center" style="margin-top:2.5rem"><a class="btn btn-secondary" href="cats.html">Meet all 31 cats &rarr;</a></div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="founder-card-grid reveal">
+          <div class="founder-media">
+            <img src="images/20.jpeg" alt="Dr. Diana du Cros with a cheetah" class="founder-img" loading="lazy" />
+          </div>
+          <div class="founder-text">
+            <span class="eyebrow">The Origin Story</span>
+            <h2>Dr. Diana du Cros</h2>
+            <p class="lead">A scientist in biology and protein biochemistry who redirected her life's work toward protecting vulnerable predators.</p>
+            <p>After years in research laboratories in the United States and Australia, Dr. du Cros set up in Potchefstroom with one clear mandate: halt the trajectory toward cheetah extinction. In 2016 she committed her personal resources to establishing Barbosa K&amp;K.</p>
+            <a href="about.html" class="btn btn-primary">Read Our Story</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" style="background-image:url('images/19.jpeg')">
+      <div class="container reveal">
+        <span class="eyebrow">See Them For Yourself</span>
+        <h2>Visit at Feeding Time</h2>
+        <p>Join our specialists for the daily afternoon predator feeding. Visits are strictly by appointment, so message us to book your spot.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/27655591257?text=Hi%20Barbosa%20KnK%2C%20I%20would%20like%20to%20book%20a%20Predator%20Feeding%20Tour." target="_blank" rel="noopener">Book via WhatsApp</a>
+          <a class="btn btn-secondary" href="tours.html">Prices &amp; Times</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- Interactive Cat Detail Modal -->
-  <div class="modal-overlay" id="catModal" aria-hidden="true" onclick="closeCatModal(event)">
-    <div class="modal-box" onclick="event.stopPropagation()">
-      <button class="modal-close" onclick="closeCatModal()">&times;</button>
-      <div class="modal-body">
-        <div class="modal-img-wrap" id="modalImgWrap">
-          <!-- Image injected here via JS -->
-        </div>
-        <div class="modal-info">
-          <span class="badge" id="modalCatCategory">Cheetah</span>
-          <h2 id="modalCatName">Cat Name</h2>
-          <p class="modal-gender" id="modalCatGender">Gender</p>
-          <hr class="divider">
-          <h4>Personality &amp; Story</h4>
-          <p id="modalCatTrait" class="modal-trait">Trait description</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Global Footer with Contact Info -->
   <footer class="site-footer">
     <div class="container footer-content">
-      
       <div class="footer-contact-bar">
         <div class="footer-col">
-          <h4>Barbosa K&amp;K</h4>
-          <p class="tagline">Conserving the African Cheetah through Science &amp; Stewardship.</p>
-          <p>Plot 17, Wilgeboom, Potchefstroom, 2531</p>
+          <div class="footer-brand"><img src="images/logo.jpeg" alt="" /><h4 style="margin:0">Barbosa K&amp;K</h4></div>
+          <p>Conserving the African cheetah and wild small cats through science and stewardship.</p>
+          <p>Plot 17, Wilgeboom, Potchefstroom, 2531<br>North West Province, South Africa</p>
         </div>
         <div class="footer-col">
           <h4>Direct Contact</h4>
           <p>Email: <a href="mailto:barbosaKnK@gmail.com">barbosaKnK@gmail.com</a></p>
-          <p>WhatsApp: <a href="https://wa.me/27655591257" target="_blank">065 559 1257</a></p>
+          <p>WhatsApp: <a href="https://wa.me/27655591257" target="_blank" rel="noopener">065 559 1257</a></p>
+          <p>Visits strictly by appointment.</p>
         </div>
         <div class="footer-col">
           <h4>Explore</h4>
           <div class="footer-quick-links">
-            <a href="#tours" onclick="navigateToSection('tours')">Feeding Tours</a>
-            <a href="#volunteer" onclick="navigateToSection('volunteer')">Volunteering</a>
-            <a href="#donate" onclick="navigateToSection('donate')">Donate</a>
-            <a href="#cats" onclick="navigateToSection('cats')">Our Cats</a>
+            <a href="about.html">About Us</a>
+            <a href="cats.html">Meet Our Cats</a>
+            <a href="tours.html">Tours &amp; Stay</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="donate.html">Donate</a>
+            <a href="contact.html">Contact</a>
           </div>
         </div>
+        <div class="footer-col">
+          <h4>Feeding Tours</h4>
+          <p>Daily, afternoons</p>
+          <p>Winter: 4:00 PM<br>Summer: 5:00 PM</p>
+          <p><a href="tours.html">Prices &amp; booking &rarr;</a></p>
+        </div>
       </div>
-
       <div class="footer-bottom-copy">
-        <p>&copy; 2026 Barbosa K&amp;K. All rights reserved.</p>
+        <p>&copy; <span data-year>2026</span> Barbosa K&amp;K. All rights reserved.</p>
+        <p>Strictly non-petting &middot; Ethical predator conservation</p>
       </div>
-
     </div>
   </footer>
 
-  <!-- Script for Interactive Functionality and Cat Data -->
-  <script>
-    const catDatabase = {
-      cheetahs: {
-        title: "Our Cheetahs",
-        desc: "Our flagship species and central focus for ethical re-wilding. Renowned for their incredible grace, agility, and sensitive nature, our cheetahs thrive in spacious natural bush camps designed to encourage instinctual behaviors.",
-        bgClass: "bg-cheetah",
-        members: [
-          { name: "Katabi", gender: "Male", img: "", trait: "Gentle and observant male, son of Katja." },
-          { name: "Chase", gender: "Female", img: "images/Chase.jpg", trait: "She has a short tail. Her tail bone died when she was a cub and it therefore stopped growing." },
-          { name: "Katja", gender: "Female", img: "", trait: "She is our most talkative cheetah during feeding time. She is also the wildest. Mother of Katabi and Keisha." },
-          { name: "Kassie", gender: "Male", img: "images/Kassie.jpg", trait: "His tail broke when he was a cub where his mom sat on it. The tail grew skew which is now used as a play toy for him." },
-          { name: "Max", gender: "Male", img: "", trait: "The tip of his tail is fluffier compared to the other cheetahs making it look like a white 'pom-pom'." },
-          { name: "Keisha", gender: "Female", img: "", trait: "She is smaller than Max. Highly inquisitive and agile daughter of Katja." }
-        ]
-      },
-      caracals: {
-        title: "Our Caracals",
-        desc: "Characterized by their striking tufted ears, reddish coats, and phenomenal jumping abilities. Our caracal enclosures provide dense brush shelter and high perches matching their native habits.",
-        bgClass: "bg-caracal",
-        members: [
-          { name: "Kane", gender: "Male", img: "", trait: "Shy but our friendliest caracal." },
-          { name: "Kitsie", gender: "Female", img: "", trait: "She has a smaller and more petite face than Kazana and middle child. Youngest sister of middle child and Kazana." },
-          { name: "Kezana", gender: "Female", img: "", trait: "The oldest sister of middle child and Kitsie." },
-          { name: "Middle child", gender: "Female", img: "", trait: "Have an older sister, Kazana, and a younger sister, Kitsie." },
-          { name: "Kara", gender: "Female", img: "", trait: "Also known as cranky boots due to being the crankiest. She is the grandma of Kitsie, Kazana and middle child." },
-          { name: "Kanae", gender: "Female", img: "", trait: "Kara’s daughter. The mother of the babies (Kitsie, Kazana and middle child)." },
-          { name: "Mia", gender: "Female", img: "", trait: "Spirited daughter of Lulu." },
-          { name: "Lulu", gender: "Female", img: "", trait: "Mia’s protective and poised mother." }
-        ]
-      },
-      servals: {
-        title: "Our Servals",
-        desc: "Known for having the longest legs and largest ears relative to their body size of any cat. Our servals enjoy tall savannah grass settings that stimulate their hearing and jumping agility.",
-        bgClass: "bg-serval",
-        members: [
-          { name: "Kovu", gender: "Male", img: "images/Kovu.jpg", trait: "Alert, observant, and prominent presence at Barbosa K&K." },
-          { name: "Kai", gender: "Male", img: "images/Kai.jpg", trait: "His tail is bent." },
-          { name: "Kera", gender: "Female", img: "", trait: "Graceful and sleek hunter with calm composure." },
-          { name: "Zea", gender: "Female", img: "", trait: "Quiet, watchful, and highly attuned to early morning feeding rounds." },
-          { name: "Chase", gender: "Male", img: "", trait: "His left eye is smaller than his right eye." },
-          { name: "Kian", gender: "Male", img: "", trait: "Energetic and quick-footed during feeding routines." },
-          { name: "Zoe", gender: "Female", img: "", trait: "Inquisitive and curious explorer of her natural grass enclosure." },
-          { name: "Pheonix", gender: "Male", img: "", trait: "Bulkier than Kre." },
-          { name: "Kre", gender: "Male", img: "", trait: "Agile, slender, and very swift." },
-          { name: "Kita", gender: "Female", img: "", trait: "Daughter of Kiara. Playful and fast learner." },
-          { name: "Kiara", gender: "Female", img: "", trait: "Mother of Kita. Wise and confident resident." }
-        ]
-      },
-      ocelots: {
-        title: "Our Ocelots",
-        desc: "Masters of camouflage with magnificent rosette-patterned coats. Barbosa K&K provides enriched treetop canopies and sheltered hideouts that support their climbing instincts.",
-        bgClass: "bg-ocelot",
-        members: [
-          { name: "Moka", gender: "Male", img: "", trait: "Confident climber who loves observing visitors from upper branches." },
-          { name: "Mara", gender: "Female", img: "", trait: "Stealthy, serene, and loves secluded canopy spots." },
-          { name: "Minka", gender: "Female", img: "", trait: "Playful nature and distinctive coat rosettes." },
-          { name: "Maya", gender: "Female", img: "images/Maya.jpg", trait: "Curious and bright-eyed resident." },
-          { name: "Manu", gender: "Male", img: "", trait: "Strong, tree-loving male with great climbing agility." },
-          { name: "Mafiki", gender: "Male", img: "", trait: "Inquisitive and playful male with a calm disposition." }
-        ]
-      }
-    };
+  <a class="whatsapp-float" href="https://wa.me/27655591257" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.66 15l-1.3 4.76 4.88-1.28A10 10 0 1 0 12 2zm5.2 13.9c-.22.62-1.28 1.18-1.77 1.23-.47.06-.92.22-3.1-.65-2.6-1.03-4.27-3.68-4.4-3.85-.13-.17-1.05-1.4-1.05-2.67s.67-1.9.9-2.16c.24-.26.52-.33.7-.33h.5c.16 0 .38-.06.6.46.22.53.75 1.83.82 1.96.06.13.1.29.02.46-.09.17-.13.28-.26.43l-.39.45c-.13.13-.27.27-.12.53.15.26.68 1.12 1.46 1.81 1 .89 1.85 1.17 2.11 1.3.26.13.42.11.57-.07.16-.17.66-.77.83-1.03.17-.27.35-.22.58-.13.24.08 1.52.72 1.78.85.26.13.43.2.5.3.06.12.06.66-.16 1.29z"/></svg></a>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
-    let currentCategory = 'cheetahs';
-
-    function filterCatCategory(categoryKey) {
-      currentCategory = categoryKey;
-      const data = catDatabase[categoryKey];
-      
-      // Update Tab Styles
-      document.querySelectorAll('.cat-tab-btn').forEach(btn => btn.classList.remove('active'));
-      const activeBtn = Array.from(document.querySelectorAll('.cat-tab-btn')).find(b => b.innerText.toLowerCase().includes(categoryKey));
-      if (activeBtn) activeBtn.classList.add('active');
-
-      // Update Subheading & Background Pattern
-      const introBox = document.getElementById('catCategoryIntro');
-      introBox.className = 'cat-category-intro ' + data.bgClass;
-      
-      document.getElementById('catCategoryTitle').innerText = data.title;
-      document.getElementById('catCategoryDesc').innerText = data.desc;
-
-      // Build Profile Cards
-      const container = document.getElementById('catGridContainer');
-      container.innerHTML = '';
-
-      data.members.forEach((cat, index) => {
-        const card = document.createElement('div');
-        card.className = 'cat-card';
-        card.onclick = () => openCatModal(categoryKey, index);
-
-        // Check if image exists, otherwise load placeholder with text
-        const imageHtml = cat.img 
-            ? `<img src="${cat.img}" alt="${cat.name}" loading="lazy" />` 
-            : `<div class="cat-placeholder"><span>📷<br>Photo Coming Soon</span></div>`;
-
-        card.innerHTML = `
-          <div class="cat-card-img-wrap">
-            ${imageHtml}
-            <span class="cat-badge">${cat.gender}</span>
-          </div>
-          <div class="cat-card-details">
-            <h3>${cat.name}</h3>
-            <p class="cat-preview-trait">${cat.trait || 'Protected resident at Barbosa K&K sanctuary.'}</p>
-            <span class="cat-view-btn">View Profile &rarr;</span>
-          </div>
-        `;
-        container.appendChild(card);
-      });
-    }
-
-    // Modal Interaction
-    function openCatModal(categoryKey, index) {
-      const cat = catDatabase[categoryKey].members[index];
-      
-      const modalImgWrap = document.getElementById('modalImgWrap');
-      if (cat.img) {
-          modalImgWrap.innerHTML = `<img src="${cat.img}" alt="${cat.name}" />`;
-      } else {
-          modalImgWrap.innerHTML = `<div class="cat-placeholder modal-placeholder"><span>📷<br>Photo Coming Soon</span></div>`;
-      }
-
-      document.getElementById('modalCatName').innerText = cat.name;
-      document.getElementById('modalCatCategory').innerText = catDatabase[categoryKey].title.replace('Our ', '');
-      document.getElementById('modalCatGender').innerText = `Gender: ${cat.gender}`;
-      document.getElementById('modalCatTrait').innerText = cat.trait || 'A cherished wild cat in our re-wilding and ethical breeding programme.';
-
-      const modal = document.getElementById('catModal');
-      modal.classList.add('show');
-      modal.setAttribute('aria-hidden', 'false');
-    }
-
-    function closeCatModal(e) {
-      const modal = document.getElementById('catModal');
-      modal.classList.remove('show');
-      modal.setAttribute('aria-hidden', 'true');
-    }
-
-    function toggleSeason(season) {
-      const winterBtn = document.getElementById('winterBtn');
-      const summerBtn = document.getElementById('summerBtn');
-      const winterSchedule = document.getElementById('winterSchedule');
-      const summerSchedule = document.getElementById('summerSchedule');
-
-      if (season === 'winter') {
-        winterBtn.classList.add('active');
-        summerBtn.classList.remove('active');
-        winterSchedule.classList.add('active');
-        summerSchedule.classList.remove('active');
-      } else {
-        summerBtn.classList.add('active');
-        winterBtn.classList.remove('active');
-        summerSchedule.classList.add('active');
-        winterSchedule.classList.remove('active');
-      }
-    }
-
-    function prefillContact(subjectText) {
-      const topicSelect = document.getElementById('topic');
-      const messageField = document.getElementById('message');
-      if (subjectText.includes('Volunteer')) {
-        topicSelect.value = 'Volunteer';
-      } else if (subjectText.includes('Safari')) {
-        topicSelect.value = 'Safari Suites';
-      }
-      messageField.value = `Hello Barbosa K&K, I would like to inquire about: ${subjectText}.`;
-      navigateToSection('contact');
-    }
-
-    function navigateToSection(id) {
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-      document.getElementById('navLinks').classList.remove('open');
-    }
-
-    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-      document.getElementById('navLinks').classList.toggle('open');
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      filterCatCategory('cheetahs');
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
