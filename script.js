@@ -134,7 +134,7 @@ function toggleSeason(season) {
 
 /* ---------- Photo gallery lightbox ---------- */
 (function () {
-  const items = Array.from(document.querySelectorAll('.gallery button'));
+  const items = Array.from(document.querySelectorAll('.gallery button, .photo-grid button, .vol-photos button'));
   const lb = document.getElementById('lightbox');
   if (!items.length || !lb) return;
   const img = lb.querySelector('img');
