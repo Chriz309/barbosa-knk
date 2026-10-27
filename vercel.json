@@ -1,0 +1,6 @@
+{
+  "cleanUrls": false,
+  "rewrites": [
+    { "source": "/:page(about|cats|contact|donate|tours|volunteer)", "destination": "/:page.html" }
+  ]
+}
