@@ -3,7 +3,7 @@
    ========================================================= */
 
 /* >>> Paste your Web3Forms access key here (get one free at https://web3forms.com) <<< */
-const WEB3FORMS_ACCESS_KEY = "a72f03b2-9102-4d27-b51c-1fc7f2d8f94f";
+const WEB3FORMS_ACCESS_KEY = "fdae660c-d8d9-4e77-b783-eb3d91afc52b";
 
 const WHATSAPP_NUMBER = "27655591257";
 const CONTACT_EMAIL = "barbosaKnK@gmail.com";
